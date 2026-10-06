@@ -1,0 +1,253 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>amazon.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #e3e6e6;
+        }
+
+
+        .nav-top {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #131921;
+            color: red;
+            padding: 6px 14px;
+        }
+
+        .logo {
+            color: deeppink;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 6px;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+            .item small {
+                font-size: 12px;
+                color: #ccc;
+            }
+
+            .item b {
+                font-size: 14px;
+            }
+
+        .search {
+            flex: 1;
+            display: flex;
+            height: 40px;
+        }
+
+            .search select {
+                background: #e6e6e6;
+                border: none;
+                padding: 0 8px;
+                border-radius: 4px 0 0 4px;
+            }
+
+            .search input {
+                flex: 1;
+                border: none;
+                padding: 0 10px;
+                font-size: 15px;
+                outline: none;
+            }
+
+            .search button {
+                width: 46px;
+                border: none;
+                background: #febd69;
+                border-radius: 0 4px 4px 0;
+                cursor: pointer;
+            }
+
+       
+        .nav-bottom {
+            display: flex;
+            gap: 4px;
+            background: #232f3e;
+            padding: 0 10px;
+        }
+
+            .nav-bottom a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 14px;
+                padding: 8px 10px;
+            }
+
+                .item:hover, .nav-bottom a:hover, .logo:hover {
+                    outline: 1px solid #fff;
+                }
+
+        
+        .cards-wrap {
+            position: relative;
+            padding: 12px 16px;
+            background: white;
+            height : 1200px
+
+        }
+
+        .cards {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+        }
+
+            .cards::-webkit-scrollbar {
+                display: none;
+            }
+
+        .card {
+            flex: 0 0 300px;
+            height: 480px;
+            border-radius: 12px;
+            padding: 14px 12px;
+            text-decoration: none;
+            color: #111;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .card h3 {
+                font-size: 26px;
+                line-height: 1.1;
+                margin-bottom: 12px;
+            }
+
+            .card img {
+                width: 100%;
+                flex: 1;
+                object-fit: cover;
+                border-radius: 8px;
+                min-height: 0;
+            }
+
+        .arrow {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 90px;
+            border: 1px solid #ccc;
+            border-radius: 8px 0 0 8px;
+            background: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,.2);
+        }
+
+            .arrow:hover {
+                background: red;
+            }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-top">
+            <a href="#" class="logo">amazon</a>
+
+            <div class="item deliver">
+                <small>Deliver to</small>
+                <b>Vietnam</b>
+            </div>
+
+            <form class="search">
+                <select><option>All</option></select>
+                <input type="text" placeholder="Search Amazon">
+                <button type="submit">🔍</button>
+            </form>
+
+            <div class="item"><b>EN</b></div>
+
+            <div class="item">
+                <small>Hello, sign in</small>
+                <b>Account & Lists</b>
+            </div>
+
+            <div class="item">
+                <small>Returns</small>
+                <b>& Orders</b>
+            </div>
+
+            <div class="item cart"><b> Cart</b></div>
+        </div>
+
+        <nav class="nav-bottom">
+            <a href="#"> All</a>
+            <a href="#">Prime Video</a>
+            <a href="#">Coupons</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Registry</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Sell</a>
+        </nav>
+    </header>
+    <section class="cards-wrap">
+        <div class="cards" id="cards">
+
+            <a href="#" class="card" style="background:#c9dcd9">
+                <h3>Shop kitchen must-haves</h3>
+                <img src="~/Content/51l7ZOsRo7L._AC_AIweblab1431263,T1_SF1282.5,2052_QL80_.jpg" />
+            </a>
+
+            <a href="#" class="card" style="background:#ffc4b3">
+                <h3>Shop all things beauty</h3>
+                <img src="~/Content/61Ld77LHXQL._AC_AIweblab1431263,T1_SF1282.5,1981.5_QL80_.jpg" />
+            </a>
+
+            <a href="#" class="card" style="background:#d9d0c8">
+                <h3>Start looking sharp</h3>
+                <img src="~/Content/61R7G24e7dL._AC_AIweblab1431263,T1_SF1282.5,1981.5_QL80_.jpg" />
+            </a>
+
+            <a href="#" class="card" style="background:#b5ceef">
+                <h3><strong>Toys for little ones</strong></h3>
+                <img src="~/Content/61upHi2gzaL._AC_AIweblab1431263,T1_SF1282.5,2052_QL80_.jpg" />
+            </a>
+
+            <a href="#" class="card" style="background:#f3c6e6">
+                <h3>Level up your PC here</h3>
+                <img src="~/Content/ảnh máy tính.jpg" />
+            </a>
+
+        </div>
+
+        <button class="arrow" id="btnNext">&gt;</button>
+    </section>
+
+
+
+  
+
+</body>
+</html>
